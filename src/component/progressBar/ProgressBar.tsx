@@ -11,10 +11,11 @@ interface Site {
 	danger_alentour: string;
 }
 
-const ProgressBar: React.FC<{ activeSiteId: string | null }> = ({ activeSiteId }) => {
+const ProgressBar: React.FC<{ activeSiteId: string | null }> = ({
+	activeSiteId,
+}) => {
 	const [sites, setSites] = useState<Site[]>([]);
 	const [loading, setLoading] = useState(true);
-	const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
 	// Fonction pour récupérer les données
 
@@ -83,7 +84,9 @@ const ProgressBar: React.FC<{ activeSiteId: string | null }> = ({ activeSiteId }
 						<div
 							id="progress_bar"
 							className="w3-container w3-red w3-round-xlarge"
-							style={{ width: `${Number.parseInt(selectedSite.danger_alentour)}%` }}
+							style={{
+								width: `${Number.parseInt(selectedSite.danger_alentour)}%`,
+							}}
 						>
 							Danger Alentour: {selectedSite.danger_alentour}%
 						</div>

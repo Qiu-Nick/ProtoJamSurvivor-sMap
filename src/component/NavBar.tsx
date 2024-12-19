@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-export default function NavBar({ setActiveFilter }) {
+interface NavBarProps {
+	setActiveFilter: (filter: string | null) => void;
+}
+
+export default function NavBar({ setActiveFilter }: NavBarProps) {
 	const [activeButton, setActiveButton] = useState<string | null>(null);
 
 	const handleButtonClick = (type: string) => {
