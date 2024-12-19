@@ -1,7 +1,7 @@
 export default function Footer() {
 	return (
 		<footer>
-			<p>&copy; Penelope, Nicolas, Pangsui, Celio, Benjamin</p>
+			<p>&copy; Penelope, Nicolas, Benjamin</p>
 		</footer>
 	);
 }
