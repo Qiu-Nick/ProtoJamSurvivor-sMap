@@ -3,7 +3,7 @@ const Header: React.FC = () => {
 	const messageBienvenue = "Bienvenue à tous les survivant";
 	const meteo = "Brumeux ☁️ -29°C ressenti -35° 🥶";
 	const qualiteAir: string =
-		"La respirabilité est de 1,2 sur l'échelle de ARES (ATMOSPHERIC RESPIRABILITY & ENDVIRONMENTAL SAFETY)";
+		"La respirabilité est de 1,2 sur l'échelle de ARES (ATMOSPHERIC RESPIRABILITY & ENVIRONMENTAL SAFETY)";
 
 	return (
 		<header>
