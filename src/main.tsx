@@ -11,3 +11,16 @@ createRoot(document.getElementById("root")!).render(
 		</BrowserRouter>
 	</StrictMode>,
 );
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+	  navigator.serviceWorker
+		.register('/service-worker.js') // Assure-toi que ton service worker est à la racine de ton dossier public
+		.then((registration) => {
+		  console.log('Service Worker enregistré avec succès:', registration);
+		})
+		.catch((error) => {
+		  console.log('L\'enregistrement du Service Worker a échoué:', error);
+		});
+	});
+  }
+  
